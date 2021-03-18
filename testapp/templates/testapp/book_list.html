@@ -3,12 +3,6 @@
 
     <h1>Books Information</h1>
         {% for book in book_list %}
-        <ul>
-            <li>Book Title: {{book.title}}</li>
-            <li>Book Author: {{book.author}}</li>
-            <li>Number of pages: {{book.pages}}</li>
-            <li>Book Price: {{book.price}}</li>
-
-        </ul>
+            <h2><a href="/{{book.id}}"> {{book.title}}</a></h2>
         {%endfor%}
     {%endblock%}

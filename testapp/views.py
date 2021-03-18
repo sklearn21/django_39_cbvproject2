@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.list import ListView
+from django.views.generic import ListView, DetailView
 from testapp.models import Book
 
 # Create your views here.
@@ -12,7 +12,12 @@ from testapp.models import Book
 
 class BookListView(ListView):
     model = Book
-    template_name = 'testapp/books.html'
-    context_object_name = 'list_of_books'
+    #template_name = 'testapp/books.html'
+    #context_object_name = 'list_of_books'
     # default template: book_list.html
     # default context object: book_list
+
+class BookDetailView(DetailView):
+    model=Book
+    #default template name: book_detail
+    #default context: book or object

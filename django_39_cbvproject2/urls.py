@@ -20,4 +20,5 @@ from testapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.BookListView.as_view()),
+    path('<pk>/',views.BookDetailView.as_view())
 ]
