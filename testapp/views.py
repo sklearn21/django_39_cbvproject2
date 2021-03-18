@@ -13,5 +13,6 @@ from testapp.models import Book
 class BookListView(ListView):
     model = Book
     template_name = 'testapp/books.html'
+    context_object_name = 'list_of_books'
     # default template: book_list.html
     # default context object: book_list
